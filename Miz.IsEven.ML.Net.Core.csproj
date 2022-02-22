@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+	<LangVersion>preview</LangVersion>
+	<AnalysisLevel>preview</AnalysisLevel>
+	<EnablePreviewFeatures>true</EnablePreviewFeatures>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML" Version="1.6.0" />
+    <PackageReference Include="Microsoft.ML.FastTree" Version="1.6.0" />
+    <PackageReference Include="Microsoft.ML.LightGbm" Version="1.6.0" />
+    <PackageReference Include="System.Runtime.Experimental" Version="6.0.2-mauipre.1.22102.15" />
+  </ItemGroup>
+  <ItemGroup Label="IsEvenMLClassifierModel">
+    <None Include="IsEvenMLClassifierModel.consumption.cs">
+      <DependentUpon>IsEvenMLClassifierModel.mbconfig</DependentUpon>
+    </None>
+    <None Include="IsEvenMLClassifierModel.training.cs">
+      <DependentUpon>IsEvenMLClassifierModel.mbconfig</DependentUpon>
+    </None>
+    <None Include="IsEvenMLClassifierModel.zip">
+      <DependentUpon>IsEvenMLClassifierModel.mbconfig</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>
